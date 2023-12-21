@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('https://travelwider.com/wp-content/uploads/2014/10/Riga-Latvia-2048x1362.jpg') center/cover no-repeat;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+h1 , h2 {
+  color: #1a478b;
+  margin-bottom: 5px;
+}
+#dormName {font-size: 4em;}
+div {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #1a478b;
+}
+
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border 0.3s, background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+
+select:focus, input:focus {
+  border: 2px solid #1a478b;
+  background-color: #fff;
+  color: #333;
+}
+
+button {
+  background-color: #1a478b;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+#extraPersonsContainer, #extraTaskContainer {
+  margin-bottom: 0px;
+  max-height: 200px;
+  overflow-y: auto;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a478b;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #d2ebf9;
+  transition: background-color 0.3s;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  h1, h2 {
+    font-size: 1.5em;
+    text-align: center; /* Center headings on smaller screens */
+  }
+
+  label {
+    font-size: 0.8em; /* Adjust label font size for better readability on small screens */
+  }
+
+  select, input {
+    font-size: 14px; /* Adjust input font size for better readability on small screens */
+  }
+
+  .button-group {
+    flex-direction: column;
+    align-items: center; /* Center buttons on smaller screens */
+  }
+
+  button {
+    padding: 10px;
+    width: 100%; /* Make buttons full width on smaller screens */
+  }
+
+  #extraPersonsContainer, #extraTaskContainer {
+    max-height: 300px; /* Increase max height for better scrollability */
+  }
+
+  table {
+    font-size: 14px; /* Adjust table font size for better readability on small screens */
+  }
+}
+
+}

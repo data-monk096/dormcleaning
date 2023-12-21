@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Kopmitnes Riga</title>
+</head>
+<body>
+  <h1 id="dormName">Kompitmas Riga</h1>
+  <h2>Cleaning Task Schedule<h2>
+
+  <div>
+    <label for="personName">Person Name:</label>
+    <select id="personName">
+      <option value="Hanna">Hanna</option>
+      <option value="Phurba">Phurba</option>
+      <option value="Elizabete">Elizabete</option>
+      <option value="Isolde">Isolde</option>
+      <option value="Rihards">Rihards</option>
+      <option value="Eliza">Eliza</option>
+      <option value="Marta">Marta</option>
+      <option value="Edward">Edward</option>
+      <option value="Katrina">Katrina</option>
+      <option value="Pankaj">Pankaj</option>
+      <option value="Sandal">Sandal</option>
+      <option value="Anna">Anna</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="taskName">Task Name:</label>
+    <select id="taskName">
+      <option value="Kitchen floor and towels">Kitchen floor and towels</option>
+      <option value="Kitchen dishes and surface">Kitchen dishes and surface</option>
+      <option value="Trash">Trash</option>
+      <option value="Women's WC">Women's WC</option>
+      <option value="Chapel">Chapel</option>
+      <option value="Men's Shower Room">Men's Shower Room</option>
+      <option value="Men's WC">Men's WC</option>
+      <option value="Women's Shower Room">Women's Shower Room</option>
+      <option value="Stairs">Stairs</option>
+      <option value="Women's Shower Room">Women's Shower Room</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate">
+  </div>
+
+  <div>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate">
+  </div>
+
+  <div><button onclick="addPersonAndTask()">Generate Task List</button></div>
+  <div> <button onclick="addExtraPerson()">New Person</button> </div>
+  <div id="extraPersonsContainer"></div>
+  <button onclick="addExtraTask()">Create New Task</button>
+  <div id="extraTaskContainer"></div>
+  <button onclick="downloadTaskList()">Download Task List</button>
+  <table id="taskTable">
+    <thead>
+      <tr>
+        <th>Person Name</th>
+        <th>Task Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Task list will be dynamically added here -->
+    </tbody>
+  </table>
+
+  <script src="html2canvas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.5/xlsx.full.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
